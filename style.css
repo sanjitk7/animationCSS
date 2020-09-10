@@ -1,0 +1,47 @@
+#text {
+  animation-duration: 5s;
+  animation-name: heart-beat;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease
+}
+
+#db {
+  text-align: center;
+  animation-duration: 10s;
+  animation-name: dbspin;
+  animation-timing-function: ease
+}
+
+@keyframes heart-beat{
+    0% {
+        font-size: 12px;
+        margin-left:0px;
+    }
+    50% {
+        font-size:24px;
+        margin-left:1000px;
+    }
+    100% {
+        font-size:12px;
+        margin-left:0px;
+    }
+}
+
+@keyframes dbspin {
+  from {
+    margin-left: 100%;
+    width: 300%;
+    transform: rotate(0deg);
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+    transform: rotate(360deg);
+  }
+}
+
+img {
+  height: 300px;
+  width: 100px;
+}
