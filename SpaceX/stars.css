@@ -1,0 +1,31 @@
+#star
+
+#star{
+    animation: glow 2s infinite linear;
+    animation-direction: alternate;
+    fill:#ffffff;
+    height:100px
+}
+#stars-div{
+    text-align: center;
+    
+}
+
+#out-lines{
+    color: #abde3a;
+}
+
+#star{
+    height:100px;
+}
+
+@keyframes glow{
+    from {
+        fill: #11cab1da;
+        height:100px;
+    }
+    to {
+        fill: #ffea2fda;
+        height:100px;
+    }
+}

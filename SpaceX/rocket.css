@@ -5,16 +5,17 @@
 }
 
 body{
-    background-color: #000000;
+    background-color: #3f3d3d;
 }
 
-/* #rocket-div{
-    text-align: center;
-} */
+#rocket-div{
+    /* border: 1px red solid; */
+}
 #rocket{
     height:100px;
     transform :rotateZ(-45deg);
     animation-name: fly;
+    position: relative;
     animation-duration: 10s;
     animation-iteration-count: infinite;
     /* animation-direction: ; */
@@ -40,32 +41,43 @@ body{
 
 @keyframes fly{
     0%{
-        margin-top:0px;
+        top:10px;
+        left:0px;
+        /* margin-top:0px; */
         transform: rotatez(45deg);
-        margin-left:10%
+        /* margin-left:10%; */
+        transform: scale(1)
         /* transform :rotateZ(-30deg); */
     }
     25%{
-        margin-top: 0px;
-        margin-left:90%;
+        top:10px;
+        left:1300px;
+        /* margin-top: 0px; */
+        /* margin-left:90%; */
         transform: rotatez(135deg);
         /* transform: rotateZ(-100deg) */
     }
     50%{
-        margin-top: 660px;
-        margin-left:90%;
-        transform: rotatez(215deg)
+        top:660px;
+        left:1300px;
+        /* margin-top: 660px;
+        margin-left:90%; */
+        transform: rotatez(215deg);
     }
     75%{
-        margin-top: 660px;
-        margin-left:0%;
+        top:660px;
+        left:10px;
+        /* margin-top: 660px;
+        margin-left:0%; */
         transform: rotatez(315deg);
 
     }
     100%{
+        top:10px;
+        left:10px;
         margin-top:0px;
         transform: rotatez(45deg);
-        margin-left:10%
+        /* margin-left:10% */
         /* transform :rotateZ(-30deg); */
     }
 }
@@ -102,3 +114,5 @@ body{
         fill: #ffea2fda;
     }
 }
+
+
