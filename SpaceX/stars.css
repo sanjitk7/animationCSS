@@ -1,31 +1,79 @@
-#star
-
-#star{
-    animation: glow 2s infinite linear;
+.star{
+    height:50px;
+    animation: glow 1s infinite;
+    position: fixed;
     animation-direction: alternate;
-    fill:#ffffff;
-    height:100px
-}
-#stars-div{
-    text-align: center;
-    
 }
 
-#out-lines{
-    color: #abde3a;
+#left-section{
+    animation: glow-color1 4s infinite linear;
+    animation-direction: alternate-reverse;
 }
 
-#star{
-    height:100px;
+#right-section{
+    animation: glow-color2 4s infinite linear;
+    animation-direction: alternate-reverse;
 }
 
 @keyframes glow{
+    from{
+        transform: scale(0.4) rotatez(45deg);
+    }
+    to{
+        transform: scale(0.7) rotatez(0deg);
+    }
+}
+
+@keyframes glow-color1{
     from {
-        fill: #11cab1da;
-        height:100px;
+        fill: #ff5100da;
     }
     to {
-        fill: #ffea2fda;
-        height:100px;
+        fill: #f6fa00da;
     }
+}
+
+@keyframes glow-color2{
+    from {
+        fill: #fffb00ef;
+    }
+    to {
+        fill: #fa4700da;
+    }
+}
+
+#stars-div2{
+    position: relative;
+    top:400px;
+    left:300px
+}
+#stars-div3{
+    position: relative;
+    top:100px;
+    left:500px
+}
+
+#stars-div4{
+    position: relative;
+    top:450px;
+    left:900px
+}
+
+#stars-div5{
+    position: relative;
+    top:50px;
+    left:900px
+}
+
+#stars-div6{
+    position: relative;
+    top:450px;
+    left:50px
+}
+
+
+#stars-div7{
+    position: relative;
+    top:500px;
+    left:600px
 }

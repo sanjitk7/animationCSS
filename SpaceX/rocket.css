@@ -58,14 +58,14 @@ body{
         /* transform: rotateZ(-100deg) */
     }
     50%{
-        top:660px;
+        top:760px;
         left:1300px;
         /* margin-top: 660px;
         margin-left:90%; */
         transform: rotatez(215deg);
     }
     75%{
-        top:660px;
+        top:760px;
         left:10px;
         /* margin-top: 660px;
         margin-left:0%; */
@@ -76,7 +76,7 @@ body{
         top:10px;
         left:10px;
         margin-top:0px;
-        transform: rotatez(45deg);
+        transform: rotatez(0deg);
         /* margin-left:10% */
         /* transform :rotateZ(-30deg); */
     }
