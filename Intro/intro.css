@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 50px
+}
+
+#welcome{
+    font-family: 'Grandstander', cursive;
+    position: absolute;
+    top:25%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    animation: drop-and-fade 3s linear;
+    animation-timing-function:ease;
+    text-align: center;
+}
+
+#author{
+    font-family: 'Long Cang', cursive;
+    position: absolute;
+    top:35%;
+    left:50%;
+    margin: 10px 0 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 30em;
+    animation: type 6s steps(60, end) infinite; 
+    color: #ffffff;
+    animation-fill-mode: forwards;  
+    animation-delay: 3s;
+}
+
+#car{
+    height:200px;
+    position: relative;
+    top:500px;
+    left:75%;
+    animation: car-move 6s infinite linear;
+}
+
+#left-wheel, #right-wheel{
+    animation: rotate-wheel 1s linear infinite;
+    /* animation-timing-function: cubic-bezier; */
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+
+@keyframes drop-and-fade{
+    from {
+        top:0%;
+        left:50%;
+        color:#ffffff
+    } to {
+        top:25%;
+        left:50%;
+        color:#000000
+    }
+}
+
+@keyframes type{ 
+    0% { width: 0;
+        visibility:hidden;
+        color:#000000
+    }
+    99% {
+        visibility: visible;
+        color: #000000
+      }
+      100% {
+        visibility: hidden;
+        color: #000000
+
+      }
+    }
+
+    @keyframes rotate-wheel{
+        from{
+            transofrm: rotatez(0deg)
+        }
+        to{
+            transform:rotatez(360deg)
+        }
+    }
+
+    @keyframes car-move{
+    from{
+        left:125%
+    }
+    to{
+        left:-30%
+    }
+    }
