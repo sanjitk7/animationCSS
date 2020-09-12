@@ -25,8 +25,9 @@ body {
   animation-direction: alternate;
 }
 
-#middle-trees {
-    animation: wind 3s linear;
+#middle-trees, #left-tree, #right-tree{
+    animation: wind 3s infinite linear;
+    animation-direction: alternate-reverse;
     height: 100px;
     transform-origin: center bottom;
 }
@@ -102,9 +103,9 @@ body {
 
 @keyframes wind {
     from{
-        transform: scale(0.7)
+        transform: translate3d(0px, 0px, 0px) rotate3d(1,1,1,5deg)
     }
     to{
-        transform: scale(1)
+        transform: translate3d(0px, 0px, 0px)
     }
 }
