@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #3e777c;
+}
+
+#light-house-div {
+  text-align: center;
+}
+
+#lighthouse {
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#window {
+  animation: flash 3s infinite linear;
+  animation-direction: alternate;
+}
+
+#middle-trees {
+    animation: wind 3s linear;
+    height: 100px;
+    transform-origin: center bottom;
+}
+
+#left-crow,#right-crow,#middle-crow {
+  animation: crow-fly infinite linear;
+  animation-duration: 10s;
+  animation-timing-function: cubic-bezier();
+}
+
+#water {
+  animation: tide 3s infinite linear;
+  animation-direction: alternate;
+  transition-timing-function: ease;
+  transform-origin: center center;
+  width: 300px;
+}
+
+@keyframes crow-fly {
+    0% {
+		transform: scale(0.5) translateX(-10vw);
+	}
+	
+	10% {
+		transform: translateY(2vh) translateX(10vw) scale(0.6);
+	}
+	
+	20% {
+		transform: translateY(0vh) translateX(30vw) scale(0.7);
+	}
+	
+	30% {
+		transform: translateY(4vh) translateX(50vw) scale(0.8);
+	}
+	
+	40% {
+		transform: translateY(2vh) translateX(70vw) scale(0.6);
+	}
+	
+	50% {
+		transform: translateY(0vh) translateX(90vw) scale(0.6);
+	}
+	
+	60% {
+		transform: translateY(0vh) translateX(110vw) scale(0.6);
+	}
+	
+	100% {
+		transform: translateY(0vh) translateX(110vw) scale(0.6);
+	}
+	
+}
+
+@keyframes flash {
+  from {
+    fill: #ffffa5;
+    /* border-radius: 90%; */
+  }
+  to {
+    fill: #ff9100;
+    /* border-radius: 50%; */
+  }
+}
+
+@keyframes tide {
+  0% {
+    transform: scale(0.999) translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: scale(1) translate3d(90px, 0, 0);
+  }
+}
+
+@keyframes wind {
+    from{
+        transform: scale(0.7)
+    }
+    to{
+        transform: scale(1)
+    }
+}
